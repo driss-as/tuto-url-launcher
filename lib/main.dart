@@ -60,7 +60,10 @@ class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   void _launchURL(String _url) async {
-    if (!await launch(_url)) throw 'Could not launch $_url';
+    if (!await launch(
+      _url,
+      // forceSafariVC: false,
+    )) throw 'Could not launch $_url';
   }
 
   @override
